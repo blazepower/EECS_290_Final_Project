@@ -16,9 +16,9 @@ public class SinkFill : MonoBehaviour{
     }
 
     public void OnMouseDrag(){
-        while (waterCan.capacity <= maxCapacity){
-            waterCan.capacity += 10 * Time.deltaTime;
-        }
+        //while (waterCan.capacity <= maxCapacity){
+            //waterCan.capacity += 10 * Time.deltaTime;
+        //}
     }
     
 }
