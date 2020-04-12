@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlantStatus : MonoBehaviour
 {
+    public GameObject plant;
     public Transform healthBar;
     public Slider healthFill;
 
@@ -15,6 +16,7 @@ public class PlantStatus : MonoBehaviour
     public Sprite goodHealthSprite;
     public Sprite nearDeathSprite;
 
+    public bool interactable = false;
     public bool isWatering = false;
     private BoxCollider2D clickBox;
 
@@ -75,13 +77,13 @@ public class PlantStatus : MonoBehaviour
     public int spamPrevent = 0;
     void OnMouseDown()
     {
-        if(PlantInteractable.isInteractable() == true)
+        if(interactable == true)
             spamPrevent = 0;
     }
 
     void OnMouseDrag()
     {
-        if (PlantInteractable.isInteractable() == true)
+        if (interactable == true)
         {
             spamPrevent++;
             if (CanStatus.isEmpty() == false)
@@ -99,7 +101,7 @@ public class PlantStatus : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (PlantInteractable.isInteractable() == true)
+        if (interactable == true)
         {
             StartCoroutine("prevent");
             isWatering = false;
@@ -115,6 +117,21 @@ public class PlantStatus : MonoBehaviour
         yield return new WaitForSeconds(0.33f);
         clickBox.enabled = true;
         spamPrevent = 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        interactable = true;
+        Debug.Log("TRUE");
+    }
+    private void OnTriggerStay2d(Collider2D other)
+    {
+        interactable = true;
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        interactable = false;
+        Debug.Log("FALSE");
     }
 
 }
