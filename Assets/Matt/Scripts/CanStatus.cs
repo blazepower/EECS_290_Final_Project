@@ -13,7 +13,7 @@ public class CanStatus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        staticAmount = 5;
+        staticAmount = 25;
     }
 
     static int gate = 0;
@@ -22,7 +22,7 @@ public class CanStatus : MonoBehaviour
     {
         amount = staticAmount;
 
-        if (adding == true && gate == 0)
+        if (adding == true && gate == 0 && Interactable.isInteractable() == true)
         {
             StartCoroutine("filling");
             gate++;
@@ -49,7 +49,7 @@ public class CanStatus : MonoBehaviour
 
     public IEnumerator filling()
     {
-        while (staticAmount < capacity && adding == true)
+        while (staticAmount < capacity && adding == true && Interactable.isInteractable() == true)
         {
             yield return new WaitForSeconds(0.1f);
             staticAmount++;

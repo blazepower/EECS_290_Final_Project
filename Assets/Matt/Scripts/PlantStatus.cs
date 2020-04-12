@@ -75,31 +75,38 @@ public class PlantStatus : MonoBehaviour
     public int spamPrevent = 0;
     void OnMouseDown()
     {
-        spamPrevent = 0;
+        if(Interactable.isInteractable() == true)
+            spamPrevent = 0;
     }
 
     void OnMouseDrag()
     {
-        spamPrevent++;
-        if (CanStatus.isEmpty() == false)
-            isWatering = true;
-        else
-            isWatering = false;
-
-        if (spamPrevent == 1 && isWatering == true)
+        if (Interactable.isInteractable() == true)
         {
-            StartCoroutine("watering");
-            StopCoroutine("decay");
+            spamPrevent++;
+            if (CanStatus.isEmpty() == false)
+                isWatering = true;
+            else
+                isWatering = false;
+
+            if (spamPrevent == 1 && isWatering == true)
+            {
+                StartCoroutine("watering");
+                StopCoroutine("decay");
+            }
         }
     }
 
     void OnMouseUp()
     {
-        StartCoroutine("prevent");
-        isWatering = false;
-        StopCoroutine("watering");
-        StopCoroutine("decay");
-        StartCoroutine("decay");
+        if (Interactable.isInteractable() == true)
+        {
+            StartCoroutine("prevent");
+            isWatering = false;
+            StopCoroutine("watering");
+            StopCoroutine("decay");
+            StartCoroutine("decay");
+        }
     }
 
     public IEnumerator prevent()

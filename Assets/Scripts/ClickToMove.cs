@@ -35,8 +35,10 @@ public class ClickToMove : MonoBehaviour
     void Move()
     {
         //transform.rotation = Quaternion.LookRotation(Vector3.forward, targetPos);
-
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+
+        if (isMoving == false)
+            return;
 
         if (transform.position == targetPos)
         {
