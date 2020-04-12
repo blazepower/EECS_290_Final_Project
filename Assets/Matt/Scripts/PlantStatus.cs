@@ -75,13 +75,13 @@ public class PlantStatus : MonoBehaviour
     public int spamPrevent = 0;
     void OnMouseDown()
     {
-        if(Interactable.isInteractable() == true)
+        if(PlantInteractable.isInteractable() == true)
             spamPrevent = 0;
     }
 
     void OnMouseDrag()
     {
-        if (Interactable.isInteractable() == true)
+        if (PlantInteractable.isInteractable() == true)
         {
             spamPrevent++;
             if (CanStatus.isEmpty() == false)
@@ -99,7 +99,7 @@ public class PlantStatus : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (Interactable.isInteractable() == true)
+        if (PlantInteractable.isInteractable() == true)
         {
             StartCoroutine("prevent");
             isWatering = false;

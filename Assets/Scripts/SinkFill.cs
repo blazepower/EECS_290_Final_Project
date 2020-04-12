@@ -10,7 +10,7 @@ public class SinkFill : MonoBehaviour{
 
     void Update()
     {
-        if (hover == true && Interactable.isInteractable() == true)
+        if (hover == true && SinkInteractable.isInteractable() == true)
         {
             SpriteRenderer sprite = GetComponent<SpriteRenderer>();
             if (sprite != null)
@@ -40,13 +40,13 @@ public class SinkFill : MonoBehaviour{
 
     public void OnMouseDown()
     {
-        if (Interactable.isInteractable() == true)
+        if (SinkInteractable.isInteractable() == true)
             CanStatus.Add();
     }
 
     public void OnMouseUp()
     {
-        if (Interactable.isInteractable() == true)
+        if (SinkInteractable.isInteractable() == true)
             CanStatus.StopAdd();
     }
 

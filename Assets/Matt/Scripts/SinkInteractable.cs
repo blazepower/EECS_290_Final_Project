@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public class SinkInteractable : MonoBehaviour
 {
     public static bool interactable = false;
+
+    void Start()
+    {
+        interactable = false;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

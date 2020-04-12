@@ -22,7 +22,7 @@ public class CanStatus : MonoBehaviour
     {
         amount = staticAmount;
 
-        if (adding == true && gate == 0 && Interactable.isInteractable() == true)
+        if (adding == true && gate == 0 && SinkInteractable.isInteractable() == true)
         {
             StartCoroutine("filling");
             gate++;
@@ -49,7 +49,7 @@ public class CanStatus : MonoBehaviour
 
     public IEnumerator filling()
     {
-        while (staticAmount < capacity && adding == true && Interactable.isInteractable() == true)
+        while (staticAmount < capacity && adding == true && SinkInteractable.isInteractable() == true)
         {
             yield return new WaitForSeconds(0.1f);
             staticAmount++;
