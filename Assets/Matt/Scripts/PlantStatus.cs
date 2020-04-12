@@ -16,12 +16,15 @@ public class PlantStatus : MonoBehaviour
     public Sprite nearDeathSprite;
 
     public bool isWatering = false;
+    private BoxCollider2D clickBox;
+
 
     void Start()
     {
         healthFill.maxValue = maxHealth;
         currentHealth = maxHealth;
         StartCoroutine("decay");
+        clickBox = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -29,61 +32,82 @@ public class PlantStatus : MonoBehaviour
     {
         if (currentHealth > 20)
         {
-            healthySprite();
+            spriteRenderer.sprite = goodHealthSprite;
         } 
         else if (currentHealth <= 20)
         {
-            dyingSprite();
+            spriteRenderer.sprite = nearDeathSprite;
         }
         healthFill.value = currentHealth;
+        if (currentHealth == 0)
+            clickBox.enabled = false;
     }
 
     public IEnumerator decay()
     {
-        if (currentHealth > 0)
+        while (currentHealth > 0 && isWatering == false)
         {
             yield return new WaitForSeconds(1.0f);
             if (isWatering == false)
-            {
                 currentHealth--;
-                StartCoroutine("decay");
-            }
         }
-    }
-
-    void OnMouseDown()
-    {
-        isWatering = true;
-        StopCoroutine("decay");
-        StartCoroutine("watering");
     }
 
     public IEnumerator watering()
     {
-        if (currentHealth < 40)
+        while (currentHealth <= 40 && isWatering == true)
         {
-            yield return new WaitForSeconds(0.25f);
-            currentHealth++;
-            if (isWatering == true)
-                StartCoroutine("watering");
+            if (CanStatus.isEmpty() == true || currentHealth == 40)
+            {
+                isWatering = false;
+                StartCoroutine("decay");
+            } 
+            else
+            {
+                yield return new WaitForSeconds(0.33f);
+                currentHealth++;
+                CanStatus.Subtract();
+            }
+
+        }
+    }
+
+    public int spamPrevent = 0;
+    void OnMouseDown()
+    {
+        spamPrevent = 0;
+    }
+
+    void OnMouseDrag()
+    {
+        spamPrevent++;
+        if (CanStatus.isEmpty() == false)
+            isWatering = true;
+        else
+            isWatering = false;
+
+        if (spamPrevent == 1 && isWatering == true)
+        {
+            StartCoroutine("watering");
+            StopCoroutine("decay");
         }
     }
 
     void OnMouseUp()
     {
+        StartCoroutine("prevent");
         isWatering = false;
-        StartCoroutine("decay");
         StopCoroutine("watering");
+        StopCoroutine("decay");
+        StartCoroutine("decay");
     }
 
-
-    public void healthySprite()
+    public IEnumerator prevent()
     {
-        spriteRenderer.sprite = goodHealthSprite;
+        clickBox.enabled = false;
+        yield return new WaitForSeconds(0.33f);
+        clickBox.enabled = true;
+        spamPrevent = 0;
     }
 
-    public void dyingSprite()
-    {
-        spriteRenderer.sprite = nearDeathSprite;
-    }
 }

@@ -4,21 +4,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SinkFill : MonoBehaviour{
-    private int maxCapacity = 50;
-    [SerializeField] private GameObject waterCan;
     public Color highlightColor = Color.cyan;
+    private Color standard = new Color(255f, 255f ,255f, 255f);
+    private bool hover = false;
 
-    public void OnMouseEnter(){
-        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        if (sprite != null){
-            sprite.color = highlightColor;
+    void Update()
+    {
+        if (hover == true)
+        {
+            SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+            if (sprite != null)
+            {
+                sprite.color = highlightColor;
+            }
+        }
+        else
+        {
+            SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+            if (sprite != null)
+            {
+                sprite.color = standard;
+            }
         }
     }
 
-    public void OnMouseDrag(){
-        //while (waterCan.capacity <= maxCapacity){
-            //waterCan.capacity += 10 * Time.deltaTime;
-        //}
+    public void OnMouseEnter()
+    {
+        hover = true;
     }
+
+    public void OnMouseExit()
+    {
+        hover = false;
+    }
+
+    public void OnMouseDown()
+    {
+        CanStatus.Add();
+    }
+
+    public void OnMouseUp()
+    {
+        CanStatus.StopAdd();
+    }
+
     
 }
