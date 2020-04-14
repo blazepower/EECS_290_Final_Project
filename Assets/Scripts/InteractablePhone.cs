@@ -7,10 +7,21 @@ namespace DefaultNamespace{
     public class InteractablePhone : MonoBehaviour{
         public Collider2D player, phone;
         private Random rand = new Random();
-        private Text[] requests = new Text[50];
+        private Text[] requests = new Text[60];
         private bool gettingRequest;
-        private Text currRequest, requestToBeAdded;
-        private static int numRequests = 0;
+        private Text currRequest;
+        private int numRequests = 0;
+        public Text requestToBeAdded;
+
+        private void Start(){
+            string[] reqsAsString = new[]{"One plant stat!", "Give me two plants! Right now"};
+
+            foreach (string s in reqsAsString){
+                requestToBeAdded.text = s;
+                requests[numRequests] = requestToBeAdded;
+                numRequests++;
+            }
+        }
 
         void addRequests(){
             requests[numRequests] = requestToBeAdded;
@@ -25,6 +36,10 @@ namespace DefaultNamespace{
         }
 
         void Update(){
+            if (requestToBeAdded != null){
+                addRequests();
+                requestToBeAdded = null;
+            }
             if (player.IsTouching(phone) && !gettingRequest){
                 getRequest();
             }
