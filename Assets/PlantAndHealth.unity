@@ -362,7 +362,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.07, y: 7.44}
+    oldSize: {x: 5.4, y: 6}
     newSize: {x: 8.07, y: 7.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -410,7 +410,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0e0e973bb03a0884eb4b195945e73c6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d7331a1e10c3d54a9c258d8ab393054, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -604,6 +604,7 @@ GameObject:
   - component: {fileID: 624504271}
   - component: {fileID: 624504272}
   - component: {fileID: 624504273}
+  - component: {fileID: 624504274}
   m_Layer: 0
   m_Name: Florist
   m_TagString: Untagged
@@ -665,12 +666,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4de4cef76d565454d98dba4a1fe704ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6b9622af7f8e10459a41ba5dcca8c9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 15, y: 14.07}
+  m_Size: {x: 6.9, y: 10.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -707,8 +708,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.89, y: 10.16}
-    newSize: {x: 15, y: 14.07}
+    oldSize: {x: 6.9, y: 10.2}
+    newSize: {x: 6.9, y: 10.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -751,6 +752,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedDisplay: 9
   florist: {fileID: 624504272}
+--- !u!95 &624504274
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624504267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79bf38888f098684bbc071eda8b885b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &654220673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +843,18 @@ PrefabInstance:
       propertyPath: plant
       value: 
       objectReference: {fileID: 2001631591}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: goodHealthSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 088ae5932c9fff0468c3f9351fa4de0d,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: nearDeathSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
+        type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1341,6 +1373,18 @@ PrefabInstance:
       propertyPath: plant
       value: 
       objectReference: {fileID: 552378813}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: goodHealthSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 088ae5932c9fff0468c3f9351fa4de0d,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: nearDeathSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
+        type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -15169,6 +15213,18 @@ PrefabInstance:
       propertyPath: plant
       value: 
       objectReference: {fileID: 97961742}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: goodHealthSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 088ae5932c9fff0468c3f9351fa4de0d,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: nearDeathSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
+        type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
       propertyPath: m_AnchorMax.y
