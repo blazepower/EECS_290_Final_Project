@@ -13,9 +13,9 @@ namespace DefaultNamespace{
         private int numRequests = 0;
         public Text requestToBeAdded;
 
-        private void Start(){
+        void Start(){
             string[] reqsAsString = new[]{"One plant stat!", "Give me two plants! Right now"};
-
+            int[] reqsNum = new[]{1, 2};
             foreach (string s in reqsAsString){
                 requestToBeAdded.text = s;
                 requests[numRequests] = requestToBeAdded;
@@ -23,11 +23,6 @@ namespace DefaultNamespace{
             }
         }
 
-        void addRequests(){
-            requests[numRequests] = requestToBeAdded;
-            numRequests++;
-        }
-        
         void getRequest(){
             gettingRequest = true;
             int index = rand.Next(requests.Length);
@@ -36,10 +31,6 @@ namespace DefaultNamespace{
         }
 
         void Update(){
-            if (requestToBeAdded != null){
-                addRequests();
-                requestToBeAdded = null;
-            }
             if (player.IsTouching(phone) && !gettingRequest){
                 getRequest();
             }
