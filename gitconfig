@@ -1,9 +1,0 @@
-    [merge]
-    tool = unityyamlmerge
-
-    [mergetool "unityyamlmerge"]
-    trustExitCode = false
-    #Replace <path to UnityYAMLMerge> in the next line with the following default locations
-    Windows: C:\\Program Files\\Unity\\Hub\\Editor\\2019.3.1f1\\Editor\\Data\\Tools\\UnityYAMLMerge.exe
-    # MacOS: /Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge
-    cmd = '<path to UnityYAMLMerge>' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
