@@ -2,17 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CountdownTimerScript : MonoBehaviour{
-    private float timeLeft = 300.0f;
+    [SerializeField] private Text timeLeft;
+    private int timeAmount = 300;
+
+    void Start()
+    {
+        StartCoroutine("timeDown");
+    }
 
     // Update is called once per frame
     void Update(){
-        timeLeft -= Time.deltaTime;
 
-        if (timeLeft < 0){
+        //timeAmount -= Time.deltaTime;
+        timeLeft.text = "Time Left: " + timeAmount.ToString();
+
+        if (timeAmount < 0){
             SceneManager.LoadScene("Store");
         }
     }
-    
+
+    public IEnumerator timeDown()
+    {
+        yield return new WaitForSeconds(1.0f);
+        timeAmount--;
+        if (timeAmount != 0)
+            StartCoroutine("timeDown");
+    }
+
 }
