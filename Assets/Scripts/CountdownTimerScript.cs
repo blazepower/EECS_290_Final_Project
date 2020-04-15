@@ -19,8 +19,8 @@ public class CountdownTimerScript : MonoBehaviour{
         //timeAmount -= Time.deltaTime;
         timeLeft.text = "Time Left: " + timeAmount.ToString();
 
-        if (timeAmount < 0){
-            SceneManager.LoadScene("Store");
+        if (timeAmount <= 0){
+            Application.LoadLevel("Store");
         }
     }
 
