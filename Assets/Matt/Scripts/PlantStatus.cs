@@ -57,7 +57,7 @@ public class PlantStatus : MonoBehaviour
 
     public IEnumerator watering()
     {
-        while (currentHealth <= 40 && isWatering == true)
+        while (currentHealth <= 40 && isWatering == true && currentHealth != 0)
         {
             if (CanStatus.isEmpty() == true || currentHealth == 40)
             {
