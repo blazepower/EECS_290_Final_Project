@@ -9,6 +9,7 @@ public class CanStatus : MonoBehaviour
     public int amount;
 
     public SpriteRenderer spriteRenderer;
+    public AudioSource cantWater;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class CanStatus : MonoBehaviour
     }
 
     static int gate = 0;
+    static int soundPrevent = 0;
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +28,11 @@ public class CanStatus : MonoBehaviour
         {
             StartCoroutine("filling");
             gate++;
+        }
+        if (soundPrevent == 0 && amount == 0)
+        {
+            cantWater.Play();
+            soundPrevent++;
         }
     }
 
@@ -53,6 +60,7 @@ public class CanStatus : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
             staticAmount++;
+            soundPrevent = 0;
         }
     }
 
