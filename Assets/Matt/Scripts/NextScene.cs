@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class NextScene : MonoBehaviour
 {
+    public void StartGame()
+    {
+        Application.LoadLevel("StartGame");
+    }
+
     public void Day1()
     {
         CountdownTimerScript.setDay1();

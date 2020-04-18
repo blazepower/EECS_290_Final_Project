@@ -365,7 +365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20.5}
+  m_AnchoredPosition: {x: 0, y: 0.20000076}
   m_SizeDelta: {x: 0.0000076293945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1062165752
@@ -388,7 +388,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 85
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -399,9 +399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Restart
-
-'
+  m_Text: Start Game
 --- !u!222 &1062165753
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -542,7 +540,7 @@ GameObject:
   - component: {fileID: 1451190065}
   - component: {fileID: 1451190064}
   m_Layer: 5
-  m_Name: RestartGame
+  m_Name: StartGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035, y: -384}
+  m_AnchoredPosition: {x: 0.000061035, y: -216}
   m_SizeDelta: {x: 459.2, y: 68.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451190064
@@ -619,7 +617,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartGame
+          m_StringArgument: Day1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1451190065
@@ -736,7 +734,7 @@ GameObject:
   - component: {fileID: 1981649947}
   - component: {fileID: 1981649946}
   m_Layer: 5
-  m_Name: EndGameText
+  m_Name: GameTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -758,7 +756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 296}
   m_SizeDelta: {x: 263.35, y: 52.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1981649946
@@ -779,7 +777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game OVER
+  m_text: Florist Frenzy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -807,13 +805,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 175
+  m_fontSizeBase: 175
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 21
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -848,7 +846,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 42.629948, w: 0}
   m_textInfo:
     textComponent: {fileID: 1981649946}
-    characterCount: 9
+    characterCount: 14
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
