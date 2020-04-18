@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CountdownTimerScript : MonoBehaviour{
     [SerializeField] private Text timeLeft;
     private int timeAmount = 75;
+    private static int dayCount = 1;
 
     void Start()
     {
@@ -19,8 +20,11 @@ public class CountdownTimerScript : MonoBehaviour{
         //timeAmount -= Time.deltaTime;
         timeLeft.text = "Time Left: " + timeAmount.ToString();
 
-        if (timeAmount <= 0){
-            Application.LoadLevel("Store");
+        if (timeAmount <= 0 && dayCount <= 2){
+            Application.LoadLevel("Store" + dayCount);
+        }
+        else if (timeAmount <= 0 && dayCount >= 3){
+            Application.LoadLevel("EndGame");
         }
     }
 
@@ -30,6 +34,16 @@ public class CountdownTimerScript : MonoBehaviour{
         timeAmount--;
         if (timeAmount != 0)
             StartCoroutine("timeDown");
+    }
+
+    public static void addDay()
+    {
+        dayCount++;
+    }
+
+    public static void setDay1()
+    {
+        dayCount = 1;
     }
 
 }
