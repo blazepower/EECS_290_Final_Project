@@ -9,6 +9,11 @@ public class NextScene : MonoBehaviour
         Application.LoadLevel("StartGame");
     }
 
+    public void KeybindsScene()
+    {
+        Application.LoadLevel("KeybindsScene");
+    }
+
     public void Day1()
     {
         CountdownTimerScript.setDay1();
@@ -30,5 +35,10 @@ public class NextScene : MonoBehaviour
     public void EndGame()
     {
         Application.LoadLevel("EndGame");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
