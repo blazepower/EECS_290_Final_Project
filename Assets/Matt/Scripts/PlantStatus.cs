@@ -20,7 +20,6 @@ public class PlantStatus : MonoBehaviour
     public bool isWatering = false;
     private BoxCollider2D clickBox;
 
-
     void Start()
     {
         healthFill.maxValue = maxHealth;
@@ -32,11 +31,11 @@ public class PlantStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth > 20)
+        if (currentHealth > (maxHealth / 2))
         {
             spriteRenderer.sprite = goodHealthSprite;
         } 
-        else if (currentHealth <= 20)
+        else if (currentHealth <= (maxHealth / 2))
         {
             spriteRenderer.sprite = nearDeathSprite;
         }
@@ -57,9 +56,9 @@ public class PlantStatus : MonoBehaviour
 
     public IEnumerator watering()
     {
-        while (currentHealth <= 40 && isWatering == true)
+        while (currentHealth <= maxHealth && isWatering == true && currentHealth != 0)
         {
-            if (CanStatus.isEmpty() == true || currentHealth == 40)
+            if (CanStatus.isEmpty() == true || currentHealth == maxHealth)
             {
                 isWatering = false;
                 StartCoroutine("decay");
