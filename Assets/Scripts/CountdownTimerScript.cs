@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CountdownTimerScript : MonoBehaviour{
-    [SerializeField] private Text timeLeft;
-    private int timeAmount = 75;
+    [SerializeField] public Text timeLeft;
+    private int timeAmount = 5;
     private static int dayCount = 1;
 
     void Start()
@@ -21,10 +21,10 @@ public class CountdownTimerScript : MonoBehaviour{
         timeLeft.text = "Time Left: " + timeAmount.ToString();
 
         if (timeAmount <= 0 && dayCount <= 2){
-            Application.LoadLevel("Store" + dayCount);
+            SceneManager.LoadScene("Store" + dayCount);
         }
         else if (timeAmount <= 0 && dayCount >= 3){
-            Application.LoadLevel("EndGame");
+            SceneManager.LoadScene("EndGame");
         }
     }
 

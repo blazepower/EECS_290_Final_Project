@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WaterLeft : MonoBehaviour
 {
-    [SerializeField] private Text waterLeft;
+    [SerializeField] public Text waterLeft;
     private int waterAmount;
 
 

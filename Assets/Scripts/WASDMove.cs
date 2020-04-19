@@ -34,4 +34,14 @@ public class WASDMove : MonoBehaviour
     {
         florist.MovePosition(florist.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+    public static void shoesMovespeed()
+    {
+        moveSpeed = 12;
+    }
+
+    public static void normalMovespeed()
+    {
+        moveSpeed = 8;
+    }
 }

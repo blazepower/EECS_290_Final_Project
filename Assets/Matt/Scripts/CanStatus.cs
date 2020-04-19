@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CanStatus : MonoBehaviour
 {
-    public static int capacity = 50;
+    public static int capacity;
     public static int staticAmount;
     public int amount;
+    public static float fillSpeed;
 
     public SpriteRenderer spriteRenderer;
     public AudioSource cantWater;
@@ -58,7 +59,7 @@ public class CanStatus : MonoBehaviour
     {
         while (staticAmount < capacity && adding == true && SinkInteractable.isInteractable() == true)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(fillSpeed);
             staticAmount++;
             soundPrevent = 0;
         }
@@ -79,6 +80,26 @@ public class CanStatus : MonoBehaviour
     public static int getAmount()
     {
         return staticAmount;
+    }
+
+    public static void setNormalCan()
+    {
+        capacity = 50;
+    }
+
+    public static void setUpgradedCan()
+    {
+        capacity = 100;
+    }
+
+    public static void setNormalFill()
+    {
+        fillSpeed = 0.1f;
+    }
+
+    public static void setUpgradedFill()
+    {
+        fillSpeed = 0.05f;
     }
 }
 
