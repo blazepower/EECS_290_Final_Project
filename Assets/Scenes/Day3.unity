@@ -930,6 +930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedDisplay: 9
   florist: {fileID: 624504272}
+  animator: {fileID: 624504274}
 --- !u!95 &624504274
 Animator:
   serializedVersion: 3
