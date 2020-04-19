@@ -7,7 +7,6 @@ public class ClickToMove : MonoBehaviour
     public Vector3 targetPos;
     private float speed = 15;
     public bool isMoving = false;
-    private bool didCollide = false;
 
 
     // Update is called once per frame

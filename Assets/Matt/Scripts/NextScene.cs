@@ -1,40 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
     public void StartGame()
     {
-        Application.LoadLevel("StartGame");
+        SceneManager.LoadScene("StartGame");
     }
 
     public void KeybindsScene()
     {
-        Application.LoadLevel("KeybindsScene");
+        SceneManager.LoadScene("KeybindsScene");
     }
 
     public void Day1()
     {
         CountdownTimerScript.setDay1();
-        Application.LoadLevel("Day1");
+        SceneManager.LoadScene("Day1");
     }
 
     public void Day2()
     {
         CountdownTimerScript.addDay();
-        Application.LoadLevel("Day2");
+        SceneManager.LoadScene("Day2");
     }
 
     public void Day3()
     {
         CountdownTimerScript.addDay();
-        Application.LoadLevel("Day3");
+        SceneManager.LoadScene("Day3");
     }
 
     public void EndGame()
     {
-        Application.LoadLevel("EndGame");
+        SceneManager.LoadScene("EndGame");
     }
 
     public void Quit()
