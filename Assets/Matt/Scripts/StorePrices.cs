@@ -5,7 +5,7 @@ using UnityEngine;
 public class StorePrices : MonoBehaviour
 {
     public static int shoesPrice = 300;
-    public static int fertilizerPrice = 50;
+    public static int canPrice = 400;
     public static int sinkPrice = 200;
 
     public static int getShoesPrice()
@@ -13,9 +13,9 @@ public class StorePrices : MonoBehaviour
         return shoesPrice;
     }
 
-    public static int getFertilizerPrice()
+    public static int getCanPrice()
     {
-        return fertilizerPrice;
+        return canPrice;
     }
 
     public static int getSinkPrice()

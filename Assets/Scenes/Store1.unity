@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 325483260}
   - component: {fileID: 325483259}
   m_Layer: 5
-  m_Name: Fertilizer
+  m_Name: WateringCan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,7 +808,7 @@ RectTransform:
   m_GameObject: {fileID: 325483257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 448466664}
   - {fileID: 1701352017}
@@ -817,7 +817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: 26}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325483259
@@ -871,7 +871,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: enableFertilizerPurchaseConfirmation
+          m_StringArgument: enableCanPurchaseConfirmation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &325483260
@@ -892,7 +892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fef2ee945bbcd4ae48da6dd3be0f3bfe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73b170229a1ebaa479cdfddb876a83bb, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 448466666}
   - component: {fileID: 448466665}
   m_Layer: 5
-  m_Name: FertilizerName
+  m_Name: WateringCanName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1254,7 +1254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.00004, y: -343}
+  m_AnchoredPosition: {x: 15.00004, y: -265}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448466665
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fertilizer ($50)
+  m_text: Upgraded Watering Can ($400)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1303,8 +1303,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 11
+  m_firstOverflowCharacterIndex: 9
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1344,12 +1344,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 448466665}
-    characterCount: 16
+    characterCount: 28
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2089,10 +2089,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyLeft: {fileID: 924412440}
   shoes: {fileID: 1655975913}
-  fertilizer: {fileID: 325483257}
+  can: {fileID: 325483257}
   sink: {fileID: 826624141}
   shoesPurchaseConfirmation: {fileID: 291947534}
-  fertilizerPurchaseConfirmation: {fileID: 1305908449}
+  canPurchaseConfirmation: {fileID: 1305908449}
   sinkPurchaseConfirmation: {fileID: 1248012901}
 --- !u!114 &924412439
 MonoBehaviour:
@@ -2554,7 +2554,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: disableFertilizerPurchaseConfirmation
+          m_StringArgument: disableCanPurchaseConfirmation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1073058773
@@ -2913,10 +2913,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyLeft: {fileID: 924412440}
   shoes: {fileID: 1655975913}
-  fertilizer: {fileID: 325483257}
+  can: {fileID: 325483257}
   sink: {fileID: 826624141}
   shoesPurchaseConfirmation: {fileID: 291947534}
-  fertilizerPurchaseConfirmation: {fileID: 1305908449}
+  canPurchaseConfirmation: {fileID: 1305908449}
   sinkPurchaseConfirmation: {fileID: 1248012901}
 --- !u!4 &1176082900
 Transform:
@@ -3191,7 +3191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305908450}
   m_Layer: 5
-  m_Name: FertilizerPurchaseConfirmation
+  m_Name: CanPurchaseConfirmation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3274,7 +3274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fill up your watering can faster with this sink!
+  m_text: Fill up your watering can 50% faster with this sink!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3343,12 +3343,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -63.000668, w: 0}
   m_textInfo:
     textComponent: {fileID: 1385542775}
-    characterCount: 48
+    characterCount: 52
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 9
+    spaceCount: 9
+    wordCount: 10
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4067,7 +4067,7 @@ GameObject:
   - component: {fileID: 1701352019}
   - component: {fileID: 1701352018}
   m_Layer: 5
-  m_Name: FertilizerDescription
+  m_Name: WateringCanDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4089,7 +4089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 236.50008, y: -507}
+  m_AnchoredPosition: {x: 236.50008, y: -411}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701352018
@@ -4110,7 +4110,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Have your plants grow faster with this fertilizer! \n(one time use)"
+  m_text: Double your watering can capacity!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4155,7 +4155,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 22
+  m_firstOverflowCharacterIndex: 25
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4179,12 +4179,12 @@ MonoBehaviour:
   m_margin: {x: -177.32622, y: 0, z: 92.159775, w: 0}
   m_textInfo:
     textComponent: {fileID: 1701352018}
-    characterCount: 66
+    characterCount: 34
     spriteCount: 0
-    spaceCount: 11
-    wordCount: 11
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4316,7 +4316,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: buyFertilizer
+          m_StringArgument: buyCan
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1754503568

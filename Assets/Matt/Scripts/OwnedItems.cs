@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class OwnedItems : MonoBehaviour
 {
     public static bool ownShoes;
-    public static bool ownFertilizer;
+    public static bool ownCan;
     public static bool ownSink;
-    public static int amountFertilizer;
     public static int currentShoes = 0;
+    public static int currentCan = 0;
     public static int currentSink = 0;
     public static int shoesMax = 1;
+    public static int canMax = 1;
     public static int sinkMax = 1;
 
     public static void doesOwnShoes()
@@ -20,9 +21,10 @@ public class OwnedItems : MonoBehaviour
         currentShoes++;
     }
 
-    public static void doesOwnFertilizer()
+    public static void doesOwnCan()
     {
-        ownFertilizer = true;
+        ownCan = true;
+        currentCan++;
     }
 
     public static void doesOwnSink()
@@ -31,14 +33,17 @@ public class OwnedItems : MonoBehaviour
         currentSink++;
     }
 
-    public static void addFertilizer()
-    {
-        amountFertilizer++;
-    }
-
     public static bool ifOwnShoes()
     {
         if (currentShoes >= 1)
+            return true;
+        else
+            return false;
+    }
+
+    public static bool ifOwnCan()
+    {
+        if (currentCan >= 1)
             return true;
         else
             return false;
@@ -55,7 +60,7 @@ public class OwnedItems : MonoBehaviour
     public static void resetOwnedItems()
     {
         currentShoes = 0;
-        amountFertilizer = 0;
+        currentCan = 0;
         currentSink = 0;
     }
 

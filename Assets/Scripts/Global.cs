@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class Global : MonoBehaviour{
     [SerializeField] public Text moneyLeft;
-    public static int money = 300;
+    public static int money = 900;
     public static int shoesPrice = StorePrices.getShoesPrice();
-    public static int fertilizerPrice = StorePrices.getFertilizerPrice();
+    public static int canPrice = StorePrices.getCanPrice();
     public static int sinkPrice = StorePrices.getSinkPrice();
     public GameObject shoes;
-    public GameObject fertilizer;
+    public GameObject can;
     public GameObject sink;
     public GameObject shoesPurchaseConfirmation;
-    public GameObject fertilizerPurchaseConfirmation;
+    public GameObject canPurchaseConfirmation;
     public GameObject sinkPurchaseConfirmation;
 
     public Global(){}
@@ -30,9 +30,9 @@ public class Global : MonoBehaviour{
         {
             shoes.GetComponent<Button>().interactable = false;
         }
-        if (money < fertilizerPrice)
+        if (money < canPrice || OwnedItems.ifOwnCan() == true)
         {
-            fertilizer.GetComponent<Button>().interactable = false;
+            can.GetComponent<Button>().interactable = false;
         }
         if (money < sinkPrice || OwnedItems.ifOwnSink() == true)
         {
@@ -56,20 +56,19 @@ public class Global : MonoBehaviour{
         shoesPurchaseConfirmation.SetActive(false);
     }
 
-    public void buyFertilizer()
+    public void buyCan()
     {
-        if (money >= fertilizerPrice)
+        if (money >= canPrice)
         {
-            money = money - fertilizerPrice;
-            OwnedItems.doesOwnFertilizer();
-            OwnedItems.addFertilizer();
+            money = money - canPrice;
+            OwnedItems.doesOwnCan();
         }
         else
         {
             Debug.Log("Not enough money");
         }
         Debug.Log(money);
-        fertilizerPurchaseConfirmation.SetActive(false);
+        canPurchaseConfirmation.SetActive(false);
     }
 
     public void buySink()
@@ -97,14 +96,14 @@ public class Global : MonoBehaviour{
         shoesPurchaseConfirmation.SetActive(false);
     }
 
-    public void enableFertilizerPurchaseConfirmation()
+    public void enableCanPurchaseConfirmation()
     {
-        fertilizerPurchaseConfirmation.SetActive(true);
+        canPurchaseConfirmation.SetActive(true);
     }
 
-    public void disableFertilizerPurchaseConfirmation()
+    public void disableCanPurchaseConfirmation()
     {
-        fertilizerPurchaseConfirmation.SetActive(false);
+        canPurchaseConfirmation.SetActive(false);
     }
 
     public void enableSinkPurchaseConfirmation()
@@ -119,6 +118,6 @@ public class Global : MonoBehaviour{
 
     public static void resetMoney()
     {
-        money = 300;
+        money = 900;
     }
 }
