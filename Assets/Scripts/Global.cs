@@ -18,13 +18,17 @@ public class Global : MonoBehaviour{
     public GameObject shoesPurchaseConfirmation;
     public GameObject canPurchaseConfirmation;
     public GameObject sinkPurchaseConfirmation;
-    public static int plantsNeeded;
+    public static int plantsNeeded = 0;
+    private Button _button;
+    private Button _button1;
+    private Button _button2;
 
     public Global(){}
 
-    void Start()
-    {
-
+    void Start(){
+        _button2 = sink.GetComponent<Button>();
+        _button1 = can.GetComponent<Button>();
+        _button = shoes.GetComponent<Button>();
     }
 
     void Update()
@@ -32,15 +36,15 @@ public class Global : MonoBehaviour{
         moneyLeft.text = "Current Wallet: $" + money.ToString();
         if (money < shoesPrice || OwnedItems.ifOwnShoes() == true)
         {
-            shoes.GetComponent<Button>().interactable = false;
+            _button.interactable = false;
         }
         if (money < canPrice || OwnedItems.ifOwnCan() == true)
         {
-            can.GetComponent<Button>().interactable = false;
+            _button1.interactable = false;
         }
         if (money < sinkPrice || OwnedItems.ifOwnSink() == true)
         {
-            sink.GetComponent<Button>().interactable = false;
+            _button2.interactable = false;
         }
     }
 

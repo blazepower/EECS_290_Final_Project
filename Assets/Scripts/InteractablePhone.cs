@@ -13,8 +13,9 @@ namespace DefaultNamespace{
         private int numRequests = 0;
         public Text requestToBeAdded;
         private bool initalTimeOver, ringing;
-        private float initialRingTime = 30.0f;
-        private float timeInBetweenRings = 30.0f, ringTime = 7.0f ;
+        private float initialRingTime = 10.0f;
+        private float timeInBetweenRings = 10.0f, ringTime = 3.0f ;
+        public AudioSource ringSound;
 
         void Start(){
             string[] reqsAsString = new[]{"One plant stat!", "Give me two plants! Right now"};
@@ -24,6 +25,8 @@ namespace DefaultNamespace{
                 requests[numRequests] = requestToBeAdded;
                 numRequests++;
             }
+
+            ringSound = GetComponent<AudioSource>();
         }
 
         void getRequest(){
@@ -34,15 +37,29 @@ namespace DefaultNamespace{
         }
 
         void Update(){
-            if (Time.time >= initialRingTime){
+            if (Time.time > initialRingTime){
+                if (ringTime > 0){
+                    Debug.Log(ringTime);
+                    if(!ringSound.isPlaying)
+                        ringSound.Play(0);
+                    //Debug.Log("test");
+                    ringTime -= (Time.deltaTime);
+                    ringing = true;
+                }
+                else{
+                    ringTime = 3.0f;
+                    ringing = false;
+                    ringSound.Stop();
+                    initialRingTime = Time.time + timeInBetweenRings;
+                }
                 
             }
-            if (player.IsTouching(phone) && !gettingRequest){
+            if (player.IsTouching(phone) && !gettingRequest && ringing){
                 getRequest();
             }
             else{
                 gettingRequest = false;
-                currRequest.gameObject.SetActive(false);
+                //currRequest.gameObject.SetActive(false);
             }
         }
     }
