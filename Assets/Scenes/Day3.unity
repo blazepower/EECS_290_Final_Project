@@ -205,6 +205,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
         type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07cc5ab867e54804ba99e72747d32119,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: bloomingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 872aebeb0a8352d42914001876ddd891,
+        type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -613,6 +625,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
         type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07cc5ab867e54804ba99e72747d32119,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: bloomingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 872aebeb0a8352d42914001876ddd891,
+        type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -846,6 +870,18 @@ PrefabInstance:
       propertyPath: nearDeathSprite
       value: 
       objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07cc5ab867e54804ba99e72747d32119,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: bloomingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 872aebeb0a8352d42914001876ddd891,
         type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
@@ -1624,6 +1660,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
         type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07cc5ab867e54804ba99e72747d32119,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: bloomingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 872aebeb0a8352d42914001876ddd891,
+        type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1825,6 +1873,18 @@ PrefabInstance:
       propertyPath: nearDeathSprite
       value: 
       objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07cc5ab867e54804ba99e72747d32119,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: bloomingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 872aebeb0a8352d42914001876ddd891,
         type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
@@ -13251,6 +13311,18 @@ PrefabInstance:
       propertyPath: nearDeathSprite
       value: 
       objectReference: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07cc5ab867e54804ba99e72747d32119,
+        type: 3}
+    - target: {fileID: 5914472658897664167, guid: ff452432285e1fc4b902f80e485017ec,
+        type: 3}
+      propertyPath: bloomingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 872aebeb0a8352d42914001876ddd891,
         type: 3}
     - target: {fileID: 5914472659407518441, guid: ff452432285e1fc4b902f80e485017ec,
         type: 3}
