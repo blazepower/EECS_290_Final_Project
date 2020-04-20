@@ -8,6 +8,7 @@ public class CanStatus : MonoBehaviour
     public static int staticAmount;
     public int amount;
     public static float fillSpeed;
+    public Animator animator;
 
     public SpriteRenderer spriteRenderer;
     public AudioSource cantWater;
@@ -24,6 +25,8 @@ public class CanStatus : MonoBehaviour
     void Update()
     {
         amount = staticAmount;
+        //Turn sink water on and off
+        animator.SetBool("sinkOn", adding);
 
         if (adding == true && gate == 0 && SinkInteractable.isInteractable() == true)
         {
