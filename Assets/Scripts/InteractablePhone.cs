@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -14,11 +14,11 @@ namespace DefaultNamespace{
         private int numRequests = 0;
         private bool initalTimeOver, ringing;
         private float initialRingTime = 10.0f;
-        private float timeInBetweenRings = 10.0f, ringTime = 3.0f;
+        private float timeInBetweenRings = 10.0f, ringTime = 5.0f, waitBeforeHide = 5.0f;
         public AudioSource ringSound;
 
         void Start(){
-            currRequest = GetComponent<Text>();
+            currRequest.gameObject.SetActive(false);
             ringSound = GetComponent<AudioSource>();
         }
 
@@ -50,7 +50,14 @@ namespace DefaultNamespace{
                 getRequest();
             }
             else{
-                //currRequest.gameObject.SetActive(false);
+                if (waitBeforeHide > 0){
+                    waitBeforeHide -= (Time.deltaTime);
+                }
+                else{
+                    currRequest.gameObject.SetActive(false);
+                    waitBeforeHide = 5.0f;
+                }
+                
             }
         }
     }
