@@ -52,7 +52,7 @@ public class PlantStatus : MonoBehaviour
         }
 
         //Plant blooms if health is full
-        if (currentHealth > maxHealth - 1)
+        if (currentHealth > maxHealth - 1 && canBloom)
         {
             clickBox.enabled = false;
             spriteRenderer.sprite = bloomingSprite;
