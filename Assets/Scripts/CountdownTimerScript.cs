@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CountdownTimerScript : MonoBehaviour{
     [SerializeField] public Text timeLeft;
-    private int timeAmount = 5;
+    private int timeAmount = 75;
     private static int dayCount = 1;
 
     void Start()
