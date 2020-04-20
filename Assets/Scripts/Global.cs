@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * This class is used to store variables that will carry from scene to scene and from class to class
+ */
 public class Global : MonoBehaviour{
     [SerializeField] public Text moneyLeft;
     public static int money = 900;
@@ -15,6 +18,7 @@ public class Global : MonoBehaviour{
     public GameObject shoesPurchaseConfirmation;
     public GameObject canPurchaseConfirmation;
     public GameObject sinkPurchaseConfirmation;
+    public static int plantsNeeded;
 
     public Global(){}
 

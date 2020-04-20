@@ -12,6 +12,9 @@ namespace DefaultNamespace{
         private Text currRequest;
         private int numRequests = 0;
         public Text requestToBeAdded;
+        private bool initalTimeOver, ringing;
+        private float initialRingTime = 30.0f;
+        private float timeInBetweenRings = 30.0f, ringTime = 7.0f ;
 
         void Start(){
             string[] reqsAsString = new[]{"One plant stat!", "Give me two plants! Right now"};
@@ -31,6 +34,9 @@ namespace DefaultNamespace{
         }
 
         void Update(){
+            if (Time.time >= initialRingTime){
+                
+            }
             if (player.IsTouching(phone) && !gettingRequest){
                 getRequest();
             }
