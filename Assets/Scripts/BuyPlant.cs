@@ -9,6 +9,7 @@ namespace DefaultNamespace{
         Random rand = new Random();
         private List<Vector3> acceptablePositions = new List<Vector3>(); //{new Vector3(15, -8, z), new Vector3(15,-4,z), new Vector3(-3, -9, z) };
         public GameObject plant;
+        public AudioSource outOfSpots;
       
 
         private void Start(){
@@ -18,19 +19,25 @@ namespace DefaultNamespace{
         }
 
         private void Update(){
-            if (Input.GetKeyUp(KeyCode.B)){
-                if (Global.money > 10){
-                    Global.money -= 10;
-                    int index = rand.Next(acceptablePositions.Count);
-                    Vector3 temp = acceptablePositions[index];
-                    if (!Physics.CheckSphere(temp, 1)){
-                        acceptablePositions.Remove(temp);
-                        Instantiate(plant, temp, Quaternion.identity);
-                        Global.plantsRemaining++;
+            try{
+                if (Input.GetKeyUp(KeyCode.B)){
+                    if (Global.money > 10){
+                        Global.money -= 10;
+                        int index = rand.Next(acceptablePositions.Count);
+                        Vector3 temp = acceptablePositions[index];
+                        if (!Physics.CheckSphere(temp, 1)){
+                            acceptablePositions.Remove(temp);
+                            Instantiate(plant, temp, Quaternion.identity);
+                            Global.plantsRemaining++;
+                        }
                     }
                 }
             }
-            
+            catch (ArgumentOutOfRangeException e){
+                if (!outOfSpots.isPlaying){
+                    outOfSpots.Play(0);
+                }
+            }
         }
     }
 }

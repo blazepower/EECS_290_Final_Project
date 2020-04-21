@@ -16,7 +16,13 @@ public class CanStatus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        staticAmount = 25;
+        if (OwnedItems.ownCan){
+            staticAmount = 100;
+        }
+        else{
+            staticAmount = 50;
+        }
+        
     }
 
     static int gate = 0;
