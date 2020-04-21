@@ -20,7 +20,7 @@ public class PlantStatus : MonoBehaviour
 
     public bool interactable = false;
     public bool isWatering = false;
-    private bool canBloom = false;
+    private bool canBloom = true;
     private BoxCollider2D clickBox;
 
     public AudioSource wateringSound;
@@ -28,7 +28,7 @@ public class PlantStatus : MonoBehaviour
     void Start()
     {
         healthFill.maxValue = maxHealth;
-        currentHealth = maxHealth * (3/4);
+        currentHealth = 30;
         StartCoroutine("decay");
         clickBox = GetComponent<BoxCollider2D>();
     }
