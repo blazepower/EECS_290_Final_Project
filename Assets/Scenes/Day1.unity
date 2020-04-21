@@ -1688,7 +1688,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!61 &956869272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1715,8 +1714,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
-=======
->>>>>>> f3fdd486ec807147abcd265437ad71172aed1a4d
 --- !u!1 &996034716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5914472658897664166, guid: ff452432285e1fc4b902f80e485017ec,
@@ -2848,7 +2845,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!61 &1446108923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2875,8 +2871,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
-=======
->>>>>>> f3fdd486ec807147abcd265437ad71172aed1a4d
 --- !u!1 &1459617208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,7 +2989,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!61 &1460651535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3022,8 +3015,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
-=======
->>>>>>> f3fdd486ec807147abcd265437ad71172aed1a4d
 --- !u!1 &1503289108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,7 +4168,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864771525}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
 --- !u!1 &1878710344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,8 +4319,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
-=======
->>>>>>> f3fdd486ec807147abcd265437ad71172aed1a4d
 --- !u!1 &1980175064
 GameObject:
   m_ObjectHideFlags: 0
