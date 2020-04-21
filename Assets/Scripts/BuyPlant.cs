@@ -9,8 +9,7 @@ namespace DefaultNamespace{
         Random rand = new Random();
         private List<Vector3> acceptablePositions = new List<Vector3>(); //{new Vector3(15, -8, z), new Vector3(15,-4,z), new Vector3(-3, -9, z) };
         public GameObject plant;
-        private bool request;
-        private int gate = 0;
+      
 
         private void Start(){
             acceptablePositions.Add(new Vector3(15, -8, z));
@@ -20,7 +19,6 @@ namespace DefaultNamespace{
 
         private void Update(){
             if (Input.GetKeyUp(KeyCode.B)){
-                request = true;
                 if (Global.money > 10){
                     Global.money -= 10;
                     int index = rand.Next(acceptablePositions.Count);
@@ -28,6 +26,7 @@ namespace DefaultNamespace{
                     if (!Physics.CheckSphere(temp, 1)){
                         acceptablePositions.Remove(temp);
                         Instantiate(plant, temp, Quaternion.identity);
+                        Global.plantsRemaining++;
                     }
                 }
             }

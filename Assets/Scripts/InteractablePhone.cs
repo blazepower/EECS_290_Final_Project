@@ -11,7 +11,6 @@ namespace DefaultNamespace{
         int[] reqsNum = new[]{1, 2};
         private bool gettingRequest;
         public Text currRequest;
-        private int numRequests = 0;
         private bool initalTimeOver, ringing;
         private float initialRingTime = 10.0f;
         private float timeInBetweenRings = 10.0f, ringTime = 5.0f, waitBeforeHide = 5.0f;
@@ -58,7 +57,6 @@ namespace DefaultNamespace{
                     currRequest.gameObject.SetActive(false);
                     waitBeforeHide = 5.0f;
                 }
-                
             }
         }
     }
