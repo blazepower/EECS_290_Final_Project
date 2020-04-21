@@ -21,8 +21,8 @@ namespace DefaultNamespace{
         private void Update(){
             try{
                 if (Input.GetKeyUp(KeyCode.B)){
-                    if (Global.money > 10){
-                        Global.money -= 10;
+                    if (Global.money > 20){
+                        Global.money -= 20;
                         int index = rand.Next(acceptablePositions.Count);
                         Vector3 temp = acceptablePositions[index];
                         if (!Physics.CheckSphere(temp, 1)){
