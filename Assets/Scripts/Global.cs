@@ -23,6 +23,7 @@ public class Global : MonoBehaviour{
     private Button _button1;
     private Button _button2;
 
+
     public Global(){}
 
     void Start(){
@@ -55,9 +56,6 @@ public class Global : MonoBehaviour{
         {
             money = money - shoesPrice;
             OwnedItems.doesOwnShoes();
-            Button yes = GetComponent<Button>();
-            AudioSource spendMoney = GetComponent<AudioSource>();
-            yes.onClick.AddListener(delegate() { audio.Play(); });
         }
         else
         {
