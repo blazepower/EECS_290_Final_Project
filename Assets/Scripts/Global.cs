@@ -24,6 +24,7 @@ public class Global : MonoBehaviour{
     private Button _button2;
     public static Queue orders = new Queue();
 
+
     public Global(){}
 
     void Start(){
@@ -71,6 +72,7 @@ public class Global : MonoBehaviour{
         {
             money = money - canPrice;
             OwnedItems.doesOwnCan();
+
         }
         else
         {

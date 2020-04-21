@@ -3,7 +3,17 @@ guid: f36276e8c6754a1479cbc9bdbcb32263
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - plant: {instanceID: 0}
+  - healthBar: {instanceID: 0}
+  - healthFill: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
+  - bloomingSprite: {instanceID: 0}
+  - goodHealthSprite: {instanceID: 0}
+  - nearDeathSprite: {instanceID: 0}
+  - deadSprite: {instanceID: 0}
+  - wateringSound: {fileID: 2871459017458449274, guid: 3f25e19dfe1cc4d95ac1528710cfc4d7,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
