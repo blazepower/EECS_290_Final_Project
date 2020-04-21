@@ -149,16 +149,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36276e8c6754a1479cbc9bdbcb32263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 0}
+  plant: {fileID: 5914472658897664166}
   healthBar: {fileID: 5914472659571861563}
   healthFill: {fileID: 5914472659358363624}
   maxHealth: 40
   currentHealth: 0
   spriteRenderer: {fileID: 5914472660780447830}
-  bloomingSprite: {fileID: 0}
-  goodHealthSprite: {fileID: 21300000, guid: e9dd0345b4548524ea48be16a4beebd4, type: 3}
-  nearDeathSprite: {fileID: 21300000, guid: 82db4f883bf2a334599705a4f26ee82e, type: 3}
-  deadSprite: {fileID: 0}
+  bloomingSprite: {fileID: 21300000, guid: 872aebeb0a8352d42914001876ddd891, type: 3}
+  goodHealthSprite: {fileID: 21300000, guid: 088ae5932c9fff0468c3f9351fa4de0d, type: 3}
+  nearDeathSprite: {fileID: 21300000, guid: e8191589ac981dc4d8653ef7067e121e, type: 3}
+  deadSprite: {fileID: 21300000, guid: 07cc5ab867e54804ba99e72747d32119, type: 3}
   interactable: 0
   isWatering: 0
   wateringSound: {fileID: -1131819548010849622}
@@ -728,14 +728,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e9dd0345b4548524ea48be16a4beebd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 088ae5932c9fff0468c3f9351fa4de0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 3.5}
+  m_Size: {x: 4.8, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

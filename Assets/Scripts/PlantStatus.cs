@@ -22,6 +22,7 @@ public class PlantStatus : MonoBehaviour
     public bool isWatering = false;
     private bool canBloom = true;
     private BoxCollider2D clickBox;
+    //public Collider2D florist;
 
     public AudioSource wateringSound;
 

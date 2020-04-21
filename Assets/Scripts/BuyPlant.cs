@@ -13,9 +13,18 @@ namespace DefaultNamespace{
       
 
         private void Start(){
-            acceptablePositions.Add(new Vector3(15, -8, z));
             acceptablePositions.Add(new Vector3(15,-4, z));
             acceptablePositions.Add(new Vector3(-3, -9, z));
+            acceptablePositions.Add(new Vector3(0, -9, z));
+            acceptablePositions.Add(new Vector3(3, -9,z));
+            acceptablePositions.Add(new Vector3(6, -9, z));
+            acceptablePositions.Add(new Vector3(9, -9, z));
+            acceptablePositions.Add(new Vector3(12, -9, z));
+            acceptablePositions.Add(new Vector3(-15, -8, z));
+            acceptablePositions.Add(new Vector3(-15, -4, z));
+            acceptablePositions.Add(new Vector3(-6, -9, z));
+            acceptablePositions.Add(new Vector3(-9, -9, z));
+            acceptablePositions.Add(new Vector3(-12, -9, z));
         }
 
         private void Update(){
