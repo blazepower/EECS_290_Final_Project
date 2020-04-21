@@ -171,6 +171,10 @@ public class PlantStatus : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         interactable = false;
+        isWatering = false;
+        wateringSound.Stop();
+        StopCoroutine("decay");
+        StartCoroutine("decay");
         Debug.Log("FALSE");
     }
 
