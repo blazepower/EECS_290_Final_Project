@@ -61,10 +61,10 @@ public class PlantStatus : MonoBehaviour
             stopDecay();
         }
 
-        if (isWatering) {
+        /*if (isWatering) {
             if (!wateringSound.isPlaying)
                 wateringSound.Play(0);
-        }
+        }*/
     }
 
     public IEnumerator decay()
@@ -113,8 +113,10 @@ public class PlantStatus : MonoBehaviour
     void OnMouseDown()
     {
         if(interactable == true)
+        {
             spamPrevent = 0;
-            //wateringSound.Play(0);
+            wateringSound.Play();
+        }
         
     }
 
