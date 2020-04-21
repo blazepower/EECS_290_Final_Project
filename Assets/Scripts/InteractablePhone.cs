@@ -16,7 +16,6 @@ namespace DefaultNamespace{
         private float initialRingTime = 10.0f;
         private float timeInBetweenRings = 10.0f, ringTime = 5.0f, waitBeforeHide = 5.0f;
         public AudioSource ringSound;
-        private Queue orders = Global.orders;
 
         void Start(){
             currRequest.gameObject.SetActive(false);
@@ -28,7 +27,7 @@ namespace DefaultNamespace{
             int index = rand.Next(reqsAsString.Length);
             currRequest.text = reqsAsString[index];
             currRequest.gameObject.SetActive(true);
-            orders.Enqueue(reqsNum[index]);
+            Global.orders.Enqueue(reqsNum[index]);
         }
 
         void Update(){
