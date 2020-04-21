@@ -49,6 +49,8 @@ public class PlantStatus : MonoBehaviour
         healthFill.value = currentHealth;
         if (currentHealth == 0)
         {
+            isWatering = false;
+            wateringSound.Stop();
             clickBox.enabled = false;
             spriteRenderer.sprite = deadSprite;
         }
@@ -61,14 +63,20 @@ public class PlantStatus : MonoBehaviour
             stopDecay();
         }
 
-        if (isWatering) {
+        if (CanStatus.isEmpty() == true)
+        {
+            isWatering = false;
+        }
+
+        /*if (isWatering) {
             if (!wateringSound.isPlaying)
                 wateringSound.Play(0);
-        }
+        }*/
     }
 
     public IEnumerator decay()
     {
+        wateringSound.Stop();
         while (currentHealth > 0 && isWatering == false)
         {
             yield return new WaitForSeconds(1.0f);
@@ -96,6 +104,7 @@ public class PlantStatus : MonoBehaviour
             
             if (CanStatus.isEmpty() == true || currentHealth == maxHealth)
             {
+                wateringSound.Stop();
                 isWatering = false;
                 StartCoroutine("decay");
             } 
@@ -113,8 +122,10 @@ public class PlantStatus : MonoBehaviour
     void OnMouseDown()
     {
         if(interactable == true)
+        {
             spamPrevent = 0;
-            //wateringSound.Play(0);
+            wateringSound.Play();
+        }
         
     }
 
@@ -169,6 +180,10 @@ public class PlantStatus : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         interactable = false;
+        isWatering = false;
+        wateringSound.Stop();
+        StopCoroutine("decay");
+        StartCoroutine("decay");
         Debug.Log("FALSE");
     }
 
