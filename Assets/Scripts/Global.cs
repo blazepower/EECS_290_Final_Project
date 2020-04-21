@@ -55,6 +55,9 @@ public class Global : MonoBehaviour{
         {
             money = money - shoesPrice;
             OwnedItems.doesOwnShoes();
+            Button yes = GetComponent<Button>();
+            AudioSource spendMoney = GetComponent<AudioSource>();
+            yes.onClick.AddListener(delegate() { audio.Play(); });
         }
         else
         {
@@ -70,6 +73,7 @@ public class Global : MonoBehaviour{
         {
             money = money - canPrice;
             OwnedItems.doesOwnCan();
+
         }
         else
         {
