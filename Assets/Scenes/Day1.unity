@@ -1145,6 +1145,7 @@ Transform:
   - {fileID: 1505651724}
   - {fileID: 996034717}
   - {fileID: 1624169804}
+  - {fileID: 1060472895}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1288,7 +1289,7 @@ GameObject:
   - component: {fileID: 1060472895}
   - component: {fileID: 1060472894}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BuyPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1314,12 +1315,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060472893}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2169058, y: 2.5416946, z: -4288.0625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.0669227, y: 1.2569003, z: -4263.6206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 949677783}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231476875
 GameObject:
