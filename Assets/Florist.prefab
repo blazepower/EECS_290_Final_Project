@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 0
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   cantWater: {fileID: 7862734577591901955}
 --- !u!82 &7862734577591901955
@@ -378,5 +379,5 @@ MonoBehaviour:
   can: {fileID: 7862734577591901966}
   normalSink: {fileID: 21300000, guid: 6d7331a1e10c3d54a9c258d8ab393054, type: 3}
   upgradedSink: {fileID: 21300000, guid: 021da15d303848349aa259ca523512c3, type: 3}
-  normalCan: {fileID: 21300000, guid: cba823a46fa70a64092d48171482907a, type: 3}
-  upgradedCan: {fileID: 21300000, guid: 73b170229a1ebaa479cdfddb876a83bb, type: 3}
+  normalCan: {fileID: 21300000, guid: 2b043e78d8b6a3746b1483b822b72c14, type: 3}
+  upgradedCan: {fileID: 21300000, guid: 0a4d06e9773a24242997443c8b74fe12, type: 3}

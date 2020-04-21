@@ -1483,6 +1483,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.241457, y: 7.1542444}
   m_EdgeRadius: 0
+--- !u!1 &896810341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7862734577591901966, guid: 8a7f12dcbc088c448a06c015c1a533f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7862734578696913001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899865244
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,7 +3988,7 @@ GameObject:
   - component: {fileID: 1864771529}
   - component: {fileID: 1864771527}
   m_Layer: 5
-  m_Name: Day2
+  m_Name: Day1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4053,7 +4059,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Day 2
+  m_Text: 'Day 1
 
 '
 --- !u!222 &1864771530
@@ -15363,5 +15369,10 @@ PrefabInstance:
       propertyPath: sink
       value: 
       objectReference: {fileID: 484425170}
+    - target: {fileID: 7862734579181825447, guid: 8a7f12dcbc088c448a06c015c1a533f7,
+        type: 3}
+      propertyPath: can
+      value: 
+      objectReference: {fileID: 896810341}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a7f12dcbc088c448a06c015c1a533f7, type: 3}

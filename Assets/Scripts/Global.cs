@@ -56,8 +56,8 @@ public class Global : MonoBehaviour{
     {
         if (money >= shoesPrice)
         {
-            money = money - shoesPrice;
             OwnedItems.doesOwnShoes();
+            money = money - shoesPrice;
         }
         else
         {
@@ -71,9 +71,8 @@ public class Global : MonoBehaviour{
     {
         if (money >= canPrice)
         {
-            money = money - canPrice;
             OwnedItems.doesOwnCan();
-
+            money = money - canPrice;
         }
         else
         {
@@ -87,8 +86,8 @@ public class Global : MonoBehaviour{
     {
         if (money >= sinkPrice)
         {
-            money = money - sinkPrice;
             OwnedItems.doesOwnSink();
+            money = money - sinkPrice;
         }
         else
         {
