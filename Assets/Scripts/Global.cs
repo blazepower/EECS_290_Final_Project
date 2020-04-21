@@ -18,10 +18,11 @@ public class Global : MonoBehaviour{
     public GameObject shoesPurchaseConfirmation;
     public GameObject canPurchaseConfirmation;
     public GameObject sinkPurchaseConfirmation;
-    public static int plantsNeeded = 0;
+    public static int plantsRemaining = 0;
     private Button _button;
     private Button _button1;
     private Button _button2;
+    public static Queue orders = new Queue();
 
     public Global(){}
 
