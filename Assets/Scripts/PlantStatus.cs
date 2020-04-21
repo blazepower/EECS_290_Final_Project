@@ -23,6 +23,8 @@ public class PlantStatus : MonoBehaviour
     private bool canBloom = false;
     private BoxCollider2D clickBox;
 
+    public AudioSource wateringSound;
+
     void Start()
     {
         healthFill.maxValue = maxHealth;
@@ -58,6 +60,11 @@ public class PlantStatus : MonoBehaviour
             spriteRenderer.sprite = bloomingSprite;
             stopDecay();
         }
+
+        if (isWatering) {
+            if (!wateringSound.isPlaying)
+                wateringSound.Play(0);
+        }
     }
 
     public IEnumerator decay()
@@ -86,6 +93,7 @@ public class PlantStatus : MonoBehaviour
     {
         while (currentHealth <= maxHealth && isWatering == true && currentHealth != 0)
         {
+            
             if (CanStatus.isEmpty() == true || currentHealth == maxHealth)
             {
                 isWatering = false;
@@ -106,6 +114,8 @@ public class PlantStatus : MonoBehaviour
     {
         if(interactable == true)
             spamPrevent = 0;
+            //wateringSound.Play(0);
+        
     }
 
     void OnMouseDrag()
@@ -135,6 +145,7 @@ public class PlantStatus : MonoBehaviour
             StopCoroutine("watering");
             StopCoroutine("decay");
             StartCoroutine("decay");
+            wateringSound.Stop();
         }
     }
 
