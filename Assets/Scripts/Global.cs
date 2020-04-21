@@ -8,7 +8,7 @@ using UnityEngine.UI;
  */
 public class Global : MonoBehaviour{
     [SerializeField] public Text moneyLeft;
-    public static int money = 900;
+    public static int money = 200;
     public static int shoesPrice = StorePrices.getShoesPrice();
     public static int canPrice = StorePrices.getCanPrice();
     public static int sinkPrice = StorePrices.getSinkPrice();
@@ -56,8 +56,8 @@ public class Global : MonoBehaviour{
     {
         if (money >= shoesPrice)
         {
-            money = money - shoesPrice;
             OwnedItems.doesOwnShoes();
+            money = money - shoesPrice;
         }
         else
         {
@@ -71,9 +71,8 @@ public class Global : MonoBehaviour{
     {
         if (money >= canPrice)
         {
-            money = money - canPrice;
             OwnedItems.doesOwnCan();
-
+            money = money - canPrice;
         }
         else
         {
@@ -87,8 +86,8 @@ public class Global : MonoBehaviour{
     {
         if (money >= sinkPrice)
         {
-            money = money - sinkPrice;
             OwnedItems.doesOwnSink();
+            money = money - sinkPrice;
         }
         else
         {
@@ -130,6 +129,6 @@ public class Global : MonoBehaviour{
 
     public static void resetMoney()
     {
-        money = 900;
+        money = 200;
     }
 }
