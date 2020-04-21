@@ -19,6 +19,7 @@ public class Global : MonoBehaviour{
     public GameObject canPurchaseConfirmation;
     public GameObject sinkPurchaseConfirmation;
     public static int plantsRemaining = 0;
+    public static int plantsNeeded = 0;
     private Button _button;
     private Button _button1;
     private Button _button2;

@@ -26,6 +26,7 @@ namespace DefaultNamespace{
             int index = rand.Next(reqsAsString.Length);
             currRequest.text = reqsAsString[index];
             currRequest.gameObject.SetActive(true);
+            Global.plantsNeeded += reqsNum[index];
             Global.orders.Enqueue(reqsNum[index]);
         }
 

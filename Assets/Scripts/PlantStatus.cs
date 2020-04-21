@@ -28,7 +28,7 @@ public class PlantStatus : MonoBehaviour
     void Start()
     {
         healthFill.maxValue = maxHealth;
-        currentHealth = maxHealth;
+        currentHealth = maxHealth * (3/4);
         StartCoroutine("decay");
         clickBox = GetComponent<BoxCollider2D>();
     }
@@ -51,6 +51,7 @@ public class PlantStatus : MonoBehaviour
         {
             clickBox.enabled = false;
             spriteRenderer.sprite = deadSprite;
+            Global.plantsRemaining--;
         }
 
         //Plant blooms if health is full
