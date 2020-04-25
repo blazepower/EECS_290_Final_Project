@@ -15,6 +15,7 @@ namespace DefaultNamespace{
         private float initialRingTime = 10.0f;
         private float timeInBetweenRings = 10.0f, ringTime = 5.0f, waitBeforeHide = 5.0f;
         public AudioSource ringSound;
+        public Animator animator;
 
         void Start(){
             currRequest.gameObject.SetActive(false);
@@ -45,6 +46,8 @@ namespace DefaultNamespace{
                     initialRingTime = Time.time + timeInBetweenRings;
                     gettingRequest = false;
                 }
+
+                animator.SetBool("ring", ringing);
             }
 
             if (player.IsTouching(phone) && !gettingRequest && ringing){
