@@ -3042,6 +3042,7 @@ GameObject:
   - component: {fileID: 1287960283}
   - component: {fileID: 1287960286}
   - component: {fileID: 1287960287}
+  - component: {fileID: 1287960288}
   m_Layer: 0
   m_Name: Phone
   m_TagString: Untagged
@@ -3066,7 +3067,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.2, y: 6.6}
+    oldSize: {x: 4.8, y: 6.6}
     newSize: {x: 1.5, y: 2.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3114,7 +3115,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e473d2d92f14c7946a49341ef0f9939b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac9891c8b46b54142a335ef77bce67c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3133,7 +3134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287960282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.76, y: 4.75, z: -9.691796}
+  m_LocalPosition: {x: -20.5, y: 4.75, z: -9.691796}
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3155,6 +3156,7 @@ MonoBehaviour:
   phone: {fileID: 1287960283}
   currRequest: {fileID: 783676037}
   ringSound: {fileID: 1287960287}
+  animator: {fileID: 1287960288}
 --- !u!82 &1287960287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3251,6 +3253,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1287960288
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287960282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9e9b1ad703d1654ebb6fccdd30378c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1333754810
 GameObject:
   m_ObjectHideFlags: 0
