@@ -42,4 +42,10 @@ public class NextScene : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Story()
+    {
+        CountdownTimerScript.addDay();
+        SceneManager.LoadScene("Story");
+    }
 }
