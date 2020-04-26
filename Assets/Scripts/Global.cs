@@ -8,6 +8,7 @@ using UnityEngine.UI;
  */
 public class Global : MonoBehaviour{
     [SerializeField] public Text moneyLeft;
+    [SerializeField] public Text plantsNeed;
     public static int money = 700;
     public static int shoesPrice = StorePrices.getShoesPrice();
     public static int canPrice = StorePrices.getCanPrice();
@@ -37,6 +38,7 @@ public class Global : MonoBehaviour{
     void Update()
     {
         moneyLeft.text = "Current Wallet: $" + money.ToString();
+        plantsNeed.text = "Plants Needed: " + plantsNeeded.ToString();
         if (money < shoesPrice || OwnedItems.ifOwnShoes() == true)
         {
             _button.interactable = false;
