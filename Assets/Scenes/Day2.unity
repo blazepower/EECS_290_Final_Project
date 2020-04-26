@@ -2520,10 +2520,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1287960285}
   - component: {fileID: 1287960284}
-  - component: {fileID: 1287960283}
   - component: {fileID: 1287960286}
   - component: {fileID: 1287960287}
   - component: {fileID: 1287960288}
+  - component: {fileID: 1287960283}
   m_Layer: 0
   m_Name: Phone
   m_TagString: Untagged
@@ -2544,7 +2544,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.5472019, y: -0.16998672}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2555,7 +2555,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 6}
+  m_Size: {x: 8.165403, y: 9.6037445}
   m_EdgeRadius: 0
 --- !u!212 &1287960284
 SpriteRenderer:
@@ -2614,13 +2614,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287960282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.5, y: 4.75, z: -9.691796}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.6500001, z: -9.691796}
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1287960286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,7 +2634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 647033925}
-  phone: {fileID: 1287960283}
+  phone: {fileID: 0}
   currRequest: {fileID: 783676037}
   ringSound: {fileID: 1287960287}
   animator: {fileID: 1287960288}
