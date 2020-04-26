@@ -23,6 +23,7 @@ public class PlantStatus : MonoBehaviour
     private bool canBloom = true;
     private BoxCollider2D clickBox;
     //public Collider2D florist;
+    private bool deductGate = true;
 
     public AudioSource wateringSound;
 
@@ -55,6 +56,12 @@ public class PlantStatus : MonoBehaviour
             clickBox.enabled = false;
             spriteRenderer.sprite = deadSprite;
             Global.plantsRemaining--;
+        }
+
+        if (currentHealth == 0 && deductGate == true)
+        {
+            Global.plantDeadDeduction();
+            deductGate = false;
         }
 
         //Plant blooms if health is full

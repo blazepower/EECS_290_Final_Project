@@ -2637,7 +2637,7 @@ MonoBehaviour:
   phone: {fileID: 1287960283}
   currRequest: {fileID: 783676037}
   ringSound: {fileID: 1287960287}
-  animator: {fileID: 0}
+  animator: {fileID: 1287960288}
 --- !u!82 &1287960287
 AudioSource:
   m_ObjectHideFlags: 0

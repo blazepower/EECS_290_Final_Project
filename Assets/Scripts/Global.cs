@@ -30,6 +30,8 @@ public class Global : MonoBehaviour{
     public Global(){}
 
     void Start(){
+        plantsNeeded = 0;
+        plantsRemaining = 0;
         _button2 = sink.GetComponent<Button>();
         _button1 = can.GetComponent<Button>();
         _button = shoes.GetComponent<Button>();
@@ -132,5 +134,10 @@ public class Global : MonoBehaviour{
     public static void resetMoney()
     {
         money = 700;
+    }
+
+    public static void plantDeadDeduction()
+    {
+        money = money - 50;
     }
 }
