@@ -71,7 +71,7 @@ namespace DefaultNamespace{
                                     break;
                             }
 
-                            Global.plantsRemaining++;
+                            //Global.plantsReady++;
                             Global.money -= 20;
                         }
                     }

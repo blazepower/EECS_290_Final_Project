@@ -6,12 +6,11 @@ using UnityEngine.UI;
 
 public class CountdownTimerScript : MonoBehaviour{
     [SerializeField] public Text timeLeft;
-    private int timeAmount = 75;
+    private int timeAmount = 30;
     private static int dayCount = 1;
     Global g = new Global();
     private Queue orders = Global.orders;
     private int money = 0;
-    private int plantsLeft = Global.plantsReady;
 
     void Start()
     {
@@ -26,8 +25,6 @@ public class CountdownTimerScript : MonoBehaviour{
 
         if (timeAmount <= 0 && dayCount <= 2){
             completeOrders();
-            Global.plantsReady = 0;
-            Global.orders.Clear();
             SceneManager.LoadScene("Store" + dayCount);
         }
         else if (timeAmount <= 0 && dayCount >= 3){
@@ -56,12 +53,17 @@ public class CountdownTimerScript : MonoBehaviour{
     private void completeOrders(){
         while (orders.Count > 0){
             int currOrder = (int) orders.Dequeue();
-            if (plantsLeft >= currOrder){
-                money += 50;
-                plantsLeft -= currOrder;
+            if (Global.plantsReady >= currOrder){
+                money += (50 * currOrder);
+                Global.plantsReady -= currOrder;
+            }
+            else{
+                money -= 20;
             }
         }
         Global.money += money;
+        Global.plantsReady = 0;
+        Global.orders.Clear();
     }
 
 }

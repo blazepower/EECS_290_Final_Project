@@ -17,7 +17,7 @@ public class Global : MonoBehaviour{
     public GameObject shoesPurchaseConfirmation;
     public GameObject canPurchaseConfirmation;
     public GameObject sinkPurchaseConfirmation;
-    public static int plantsReady;
+    public static int plantsReady = 0;
     public static int plantsNeeded = 0;
     private Button _button;
     private Button _button1;
@@ -135,6 +135,10 @@ public class Global : MonoBehaviour{
     public static void plantDeadDeduction()
     {
         money = money - 50;
+    }
+
+    public static void plantBloomed(){
+        plantsReady++;
     }
 
     public static int getMoney()
