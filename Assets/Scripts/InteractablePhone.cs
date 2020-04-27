@@ -7,8 +7,8 @@ namespace DefaultNamespace{
     public class InteractablePhone : MonoBehaviour{
         public Collider2D player, phone;
         private Random rand = new Random();
-        string[] reqsAsString = new[]{"One plant stat!", "Give me two plants! Right now"};
-        int[] reqsNum = new[]{1, 2};
+        string[] reqsAsString = new[]{"One plant stat!", "Give me two plants! Right now", "I don't have time! Give me one plant!", "Give me one plant now or you'll never work in this town again!", "Two plants pronto! If I had time like this, I would've order yesterday instead.", "I want one plant immediately", "Hand me your best two plants!"};
+        int[] reqsNum = new[]{1, 2, 1, 1, 2, 1, 2};
         private bool gettingRequest;
         public Text currRequest;
         private bool initalTimeOver, ringing;
