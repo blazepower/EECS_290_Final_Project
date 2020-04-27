@@ -55,7 +55,7 @@ public class PlantStatus : MonoBehaviour
             wateringSound.Stop();
             clickBox.enabled = false;
             spriteRenderer.sprite = deadSprite;
-            Global.plantsRemaining--;
+            Global.plantsReady--;
         }
 
         if (currentHealth == 0 && deductGate == true)

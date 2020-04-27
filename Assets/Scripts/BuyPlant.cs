@@ -7,6 +7,7 @@ namespace DefaultNamespace{
     public class BuyPlant : MonoBehaviour{
         private static float z = 24.44197f;
         Random rand = new Random();
+        Global g = new Global();
         private List<Vector3> acceptablePositions = new List<Vector3>(); //{new Vector3(15, -8, z), new Vector3(15,-4,z), new Vector3(-3, -9, z) };
         public GameObject plant;
         public AudioSource outOfSpots;
@@ -36,7 +37,6 @@ namespace DefaultNamespace{
                         if (!Physics.CheckSphere(temp, 1)){
                             acceptablePositions.Remove(temp);
                             Instantiate(plant, temp, Quaternion.identity);
-                            Global.plantsRemaining++;
                             Global.money -= 20;
                         }
                     }
