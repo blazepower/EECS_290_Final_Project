@@ -73,6 +73,7 @@ namespace DefaultNamespace{
 
                             //Global.plantsReady++;
                             Global.money -= 20;
+                            CareerStats.moneyBoughtPlant();
                         }
                     }
                 }

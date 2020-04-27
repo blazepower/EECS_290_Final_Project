@@ -62,6 +62,8 @@ public class PlantStatus : MonoBehaviour
         if (currentHealth == 0 && deductGate == true)
         {
             Global.plantDeadDeduction();
+            CareerStats.moneyPlantDied();
+            CareerStats.addPlantsDead();
             deductGate = false;
         }
 
@@ -72,6 +74,7 @@ public class PlantStatus : MonoBehaviour
             stopDecay();
             if (!isBloomed){
                 Global.plantBloomed();
+                CareerStats.addPlantsBloomed();
                 isBloomed = true;
             }
             

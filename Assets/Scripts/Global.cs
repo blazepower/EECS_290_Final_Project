@@ -58,6 +58,7 @@ public class Global : MonoBehaviour{
         {
             OwnedItems.doesOwnShoes();
             money = money - shoesPrice;
+            CareerStats.spentMoney(shoesPrice);
         }
         else
         {
@@ -73,6 +74,7 @@ public class Global : MonoBehaviour{
         {
             OwnedItems.doesOwnCan();
             money = money - canPrice;
+            CareerStats.spentMoney(canPrice);
         }
         else
         {
@@ -88,6 +90,7 @@ public class Global : MonoBehaviour{
         {
             OwnedItems.doesOwnSink();
             money = money - sinkPrice;
+            CareerStats.spentMoney(sinkPrice);
         }
         else
         {
