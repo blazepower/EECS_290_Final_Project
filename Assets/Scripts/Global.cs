@@ -17,7 +17,7 @@ public class Global : MonoBehaviour{
     public GameObject shoesPurchaseConfirmation;
     public GameObject canPurchaseConfirmation;
     public GameObject sinkPurchaseConfirmation;
-    public static int plantsRemaining = 0;
+    public static int plantsReady = 0;
     public static int plantsNeeded = 0;
     private Button _button;
     private Button _button1;
@@ -29,7 +29,7 @@ public class Global : MonoBehaviour{
 
     void Start(){
         plantsNeeded = 0;
-        plantsRemaining = 0;
+        plantsReady = 0;
         _button2 = sink.GetComponent<Button>();
         _button1 = can.GetComponent<Button>();
         _button = shoes.GetComponent<Button>();
@@ -135,6 +135,10 @@ public class Global : MonoBehaviour{
     public static void plantDeadDeduction()
     {
         money = money - 50;
+    }
+
+    public static void plantBloomed(){
+        plantsReady++;
     }
 
     public static int getMoney()

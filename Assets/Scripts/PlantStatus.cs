@@ -21,7 +21,7 @@ public class PlantStatus : MonoBehaviour
 
     public bool interactable = false;
     public bool isWatering = false;
-    private bool canBloom = true;
+    private bool canBloom = true, isBloomed = false;
     private BoxCollider2D clickBox;
     //public Collider2D florist;
     private bool deductGate = true;
@@ -56,7 +56,7 @@ public class PlantStatus : MonoBehaviour
             wateringSound.Stop();
             clickBox.enabled = false;
             spriteRenderer.sprite = deadSprite;
-            Global.plantsRemaining--;
+            Global.plantsReady--;
         }
 
         if (currentHealth == 0 && deductGate == true)
@@ -66,11 +66,15 @@ public class PlantStatus : MonoBehaviour
         }
 
         //Plant blooms if health is full
-        if (currentHealth > maxHealth - 1 && canBloom)
-        {
+        if (currentHealth > maxHealth - 1 && canBloom){
             clickBox.enabled = false;
             spriteRenderer.sprite = bloomingSprite;
             stopDecay();
+            if (!isBloomed){
+                Global.plantBloomed();
+                isBloomed = true;
+            }
+            
         }
 
         if (CanStatus.isEmpty() == true)

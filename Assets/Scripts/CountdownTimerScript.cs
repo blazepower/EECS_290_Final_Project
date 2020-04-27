@@ -10,8 +10,7 @@ public class CountdownTimerScript : MonoBehaviour{
     private static int dayCount = 1;
     Global g = new Global();
     private Queue orders = Global.orders;
-    private int money = Global.money;
-    private int plantsLeft = Global.plantsRemaining;
+    private int money = 0;
 
     void Start()
     {
@@ -26,8 +25,6 @@ public class CountdownTimerScript : MonoBehaviour{
 
         if (timeAmount <= 0 && dayCount <= 2){
             completeOrders();
-            Global.plantsRemaining = 0;
-            Global.orders.Clear();
             SceneManager.LoadScene("Store" + dayCount);
         }
         else if (timeAmount <= 0 && dayCount >= 3){
@@ -56,12 +53,17 @@ public class CountdownTimerScript : MonoBehaviour{
     private void completeOrders(){
         while (orders.Count > 0){
             int currOrder = (int) orders.Dequeue();
-            if (plantsLeft >= currOrder){
-                money += 50;
-                plantsLeft -= currOrder;
+            if (Global.plantsReady >= currOrder){
+                money += (50 * currOrder);
+                Global.plantsReady -= currOrder;
+            }
+            else{
+                money -= 20;
             }
         }
-        Global.money = money;
+        Global.money += money;
+        Global.plantsReady = 0;
+        Global.orders.Clear();
     }
 
 }
