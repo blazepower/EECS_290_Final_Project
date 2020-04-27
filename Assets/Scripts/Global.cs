@@ -7,9 +7,7 @@ using UnityEngine.UI;
  * This class is used to store variables that will carry from scene to scene and from class to class
  */
 public class Global : MonoBehaviour{
-    [SerializeField] public Text moneyLeft;
-    [SerializeField] public Text plantsNeed;
-    public static int money = 700;
+    public static int money = 240;
     public static int shoesPrice = StorePrices.getShoesPrice();
     public static int canPrice = StorePrices.getCanPrice();
     public static int sinkPrice = StorePrices.getSinkPrice();
@@ -39,8 +37,6 @@ public class Global : MonoBehaviour{
 
     void Update()
     {
-        moneyLeft.text = "Current Wallet: $" + money.ToString();
-        plantsNeed.text = "Plants Needed: " + plantsNeeded.ToString();
         if (money < shoesPrice || OwnedItems.ifOwnShoes() == true)
         {
             _button.interactable = false;
@@ -133,11 +129,21 @@ public class Global : MonoBehaviour{
 
     public static void resetMoney()
     {
-        money = 700;
+        money = 240;
     }
 
     public static void plantDeadDeduction()
     {
         money = money - 50;
+    }
+
+    public static int getMoney()
+    {
+        return money;
+    }
+
+    public static int getPlantsNeeded()
+    {
+        return plantsNeeded;
     }
 }
