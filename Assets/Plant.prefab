@@ -152,6 +152,7 @@ MonoBehaviour:
   plant: {fileID: 5914472658897664166}
   healthBar: {fileID: 5914472659571861563}
   healthFill: {fileID: 5914472659358363624}
+  system: {fileID: 0}
   maxHealth: 40
   currentHealth: 0
   spriteRenderer: {fileID: 5914472660780447830}
