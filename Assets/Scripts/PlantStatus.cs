@@ -8,6 +8,7 @@ public class PlantStatus : MonoBehaviour
     public GameObject plant;
     public Transform healthBar;
     public Slider healthFill;
+    public ParticleSystem system;
 
     public int maxHealth = 40;
     public int currentHealth;
@@ -108,6 +109,7 @@ public class PlantStatus : MonoBehaviour
 
     public IEnumerator watering()
     {
+
         while (currentHealth <= maxHealth && isWatering == true && currentHealth != 0)
         {
             
@@ -122,6 +124,7 @@ public class PlantStatus : MonoBehaviour
                 yield return new WaitForSeconds(0.33f);
                 currentHealth++;
                 CanStatus.Subtract();
+                system.Play();
             }
 
         }
@@ -163,6 +166,7 @@ public class PlantStatus : MonoBehaviour
             StartCoroutine("prevent");
             isWatering = false;
             StopCoroutine("watering");
+            system.Stop();
             StopCoroutine("decay");
             StartCoroutine("decay");
             wateringSound.Stop();

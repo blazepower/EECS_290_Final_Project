@@ -7,11 +7,16 @@ namespace DefaultNamespace{
     public class BuyPlant : MonoBehaviour{
         private static float z = 24.44197f;
         Random rand = new Random();
-        Global g = new Global();
         private List<Vector3> acceptablePositions = new List<Vector3>(); //{new Vector3(15, -8, z), new Vector3(15,-4,z), new Vector3(-3, -9, z) };
         public GameObject plant;
         public AudioSource outOfSpots;
-      
+
+        public GameObject pink;
+        public GameObject purple;
+        public GameObject white;
+        public GameObject yellow;
+
+        private int randomInt;
 
         private void Start(){
             acceptablePositions.Add(new Vector3(15,-4, z));
@@ -36,7 +41,37 @@ namespace DefaultNamespace{
                         Vector3 temp = acceptablePositions[index];
                         if (!Physics.CheckSphere(temp, 1)){
                             acceptablePositions.Remove(temp);
-                            Instantiate(plant, temp, Quaternion.identity);
+
+                            randomInt = UnityEngine.Random.Range(0, 5);
+                            switch(randomInt)
+                            {
+                                default:
+                                    Instantiate(plant, temp, Quaternion.identity);
+                                    Debug.Log("Red");
+                                    break;
+                                case 0:
+                                    Instantiate(plant, temp, Quaternion.identity);
+                                    Debug.Log("Red");
+                                    break;
+                                case 1:
+                                    Instantiate(pink, temp, Quaternion.identity);
+                                    Debug.Log("Pink");
+                                    break;
+                                case 2:
+                                    Instantiate(purple, temp, Quaternion.identity);
+                                    Debug.Log("Purple");
+                                    break;
+                                case 3:
+                                    Instantiate(white, temp, Quaternion.identity);
+                                    Debug.Log("White");
+                                    break;
+                                case 4:
+                                    Instantiate(yellow, temp, Quaternion.identity);
+                                    Debug.Log("Yellow");
+                                    break;
+                            }
+
+                            Global.plantsRemaining++;
                             Global.money -= 20;
                         }
                     }
