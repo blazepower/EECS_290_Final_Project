@@ -7,7 +7,7 @@ using UnityEngine.UI;
  * This class is used to store variables that will carry from scene to scene and from class to class
  */
 public class Global : MonoBehaviour{
-    public static int initialMoney = 700;
+    public static int initialMoney = 240;
     public static int money = initialMoney;
     public static int shoesPrice = StorePrices.getShoesPrice();
     public static int canPrice = StorePrices.getCanPrice();

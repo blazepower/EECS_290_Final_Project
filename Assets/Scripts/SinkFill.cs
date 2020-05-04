@@ -11,7 +11,7 @@ public class SinkFill : MonoBehaviour{
 
     void Update()
     {
-        if (SinkInteractable.isInteractable() == true)
+        if (hover == true && SinkInteractable.isInteractable() == true)
         {
             SpriteRenderer sprite = GetComponent<SpriteRenderer>();
             if (sprite != null)
