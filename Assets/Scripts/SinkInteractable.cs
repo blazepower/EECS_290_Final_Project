@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SinkInteractable : MonoBehaviour
 {
@@ -11,17 +12,44 @@ public class SinkInteractable : MonoBehaviour
         interactable = false;
     }
 
+    void Update()
+    {
+        if (CanStatus.isFull() == true)
+        {
+            interactable = false;
+            CanStatus.StopAdd();
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        interactable = true;
+        if (CanStatus.isFull() == true)
+        {
+            interactable = false;
+            CanStatus.StopAdd();
+        }
+        else
+        {
+            interactable = true;
+        }
         Debug.Log("TRUE");
     }
     private void OnTriggerStay2d(Collider2D other)
     {
-        interactable = true;
+        if (CanStatus.isFull() == true)
+        {
+            interactable = false;
+            CanStatus.StopAdd();
+        }
+        else
+        {
+            interactable = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
+        CanStatus.StopAdd();
         interactable = false;
         Debug.Log("FALSE");
     }
@@ -33,4 +61,5 @@ public class SinkInteractable : MonoBehaviour
         else
             return false;
     }
+
 }

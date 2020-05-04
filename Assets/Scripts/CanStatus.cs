@@ -39,6 +39,7 @@ public class CanStatus : MonoBehaviour
             StartCoroutine("filling");
             gate++;
         }
+
         if (soundPrevent == 0 && amount == 0)
         {
             cantWater.Play();
@@ -77,13 +78,17 @@ public class CanStatus : MonoBehaviour
     public static bool isEmpty()
     {
         if (staticAmount == 0)
-        {
             return true;
-        } 
         else
-        {
             return false;
-        }
+    }
+    
+    public static bool isFull()
+    {
+        if (staticAmount == capacity)
+            return true;
+        else
+            return false;
     }
 
     public static int getAmount()

@@ -85,6 +85,9 @@ public class PlantStatus : MonoBehaviour
             isWatering = false;
         }
 
+        if (interactable == false)
+            system.Stop();
+
         /*if (isWatering) {
             if (!wateringSound.isPlaying)
                 wateringSound.Play(0);
@@ -125,6 +128,7 @@ public class PlantStatus : MonoBehaviour
                 wateringSound.Stop();
                 isWatering = false;
                 StartCoroutine("decay");
+                system.Stop();
             } 
             else
             {
@@ -202,6 +206,7 @@ public class PlantStatus : MonoBehaviour
         interactable = false;
         isWatering = false;
         wateringSound.Stop();
+        system.Stop();
         StopCoroutine("decay");
         StartCoroutine("decay");
         Debug.Log("FALSE");
