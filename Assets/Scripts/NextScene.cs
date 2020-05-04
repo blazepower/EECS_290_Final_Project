@@ -15,6 +15,10 @@ public class NextScene : MonoBehaviour
         SceneManager.LoadScene("KeybindsScene");
     }
 
+    public void CreditsScene(){
+        SceneManager.LoadScene("Credits");
+    }
+
     public void Day1()
     {
         CountdownTimerScript.setDay1();
