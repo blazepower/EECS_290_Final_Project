@@ -11,6 +11,7 @@ public class WriteCareerStats : MonoBehaviour
     public static int moneyEarned;
     public static int moneyLost;
     public static int moneySpent;
+    public static int initialWallet;
     public static int totalIncome;
     public static int endingWallet;
 
@@ -21,6 +22,7 @@ public class WriteCareerStats : MonoBehaviour
         moneyEarned = CareerStats.getMoneyEarned();
         moneyLost = CareerStats.getMoneyLost();
         moneySpent = CareerStats.getMoneySpent();
+        initialWallet = Global.getInitialMoney();
         totalIncome = moneyEarned - moneyLost;
         endingWallet = Global.getMoney();
 
@@ -29,6 +31,7 @@ public class WriteCareerStats : MonoBehaviour
                      "Total Money Earned: $"  + moneyEarned.ToString()   + "\n" +
                      "Total Money Lost: $"    + moneyLost.ToString()     + "\n" +
                      "Total Money Spent: $"   + moneySpent.ToString()    + "\n" +
+                     "Initial Wallet: $"      + initialWallet.ToString() + "\n" +
                      "Total Income: $"        + totalIncome.ToString()   + "\n" +
                      "Ending Wallet: $"       + endingWallet.ToString();
     }

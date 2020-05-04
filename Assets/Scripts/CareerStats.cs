@@ -27,7 +27,7 @@ public class CareerStats : MonoBehaviour
 
     public static void moneyBoughtPlant()
     {
-        totalMoneyLost = totalMoneyLost + 20;
+        totalMoneySpent = totalMoneySpent + 20;
     }
 
     public static void moneyPlantDied()
