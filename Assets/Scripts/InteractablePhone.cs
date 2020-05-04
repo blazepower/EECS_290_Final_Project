@@ -11,6 +11,7 @@ namespace DefaultNamespace{
         int[] reqsNum = new[]{1, 2, 1, 2, 1, 2};
         private bool gettingRequest;
         public Text currRequest;
+        private bool currRequestActive;
         private bool initalTimeOver, ringing;
         private float initialRingTime = 10.0f;
         private float timeInBetweenRings = 15.0f, ringTime = 5.0f, waitBeforeHide = 5.0f;
@@ -19,19 +20,24 @@ namespace DefaultNamespace{
 
         void Start(){
             currRequest.gameObject.SetActive(false);
+            currRequestActive = false;
             ringSound = GetComponent<AudioSource>();
         }
 
         void getRequest(){
+            ringTime = 0;
             gettingRequest = true;
             int index = rand.Next(reqsAsString.Length);
             currRequest.text = reqsAsString[index];
             currRequest.gameObject.SetActive(true);
+            currRequestActive = true;
             Global.plantsNeeded += reqsNum[index];
             Global.orders.Enqueue(reqsNum[index]);
         }
 
         void Update(){
+            if (currRequestActive == true)
+                ringSound.Stop();
             if (Time.time > initialRingTime){
                 if (ringTime > 0){
                     if (!ringSound.isPlaying)
@@ -59,6 +65,7 @@ namespace DefaultNamespace{
                 }
                 else{
                     currRequest.gameObject.SetActive(false);
+                    currRequestActive = false;
                     waitBeforeHide = 5.0f;
                 }
             }
