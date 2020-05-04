@@ -10,7 +10,6 @@ public class CanStatus : MonoBehaviour
     public static float fillSpeed;
     public Animator animator;
 
-    public SpriteRenderer spriteRenderer;
     public AudioSource cantWater;
 
     // Start is called before the first frame update
