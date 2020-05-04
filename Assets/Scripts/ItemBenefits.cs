@@ -5,21 +5,26 @@ using UnityEngine;
 public class ItemBenefits : MonoBehaviour
 {
     public GameObject sink;
-    public GameObject can;
+    //public GameObject can;
 
-    public static SpriteRenderer sinkSprite;
-    public static SpriteRenderer canSprite;
+    public SpriteRenderer sinkSprite;
+    public SpriteRenderer canSprite;
 
     public Sprite normalSink;
     public Sprite upgradedSink;
     public Sprite normalCan;
     public Sprite upgradedCan;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        sinkSprite = sink.GetComponent<SpriteRenderer>();
-        canSprite = can.GetComponent<SpriteRenderer>();
+        animator = sink.GetComponent<Animator>();
+        if (OwnedItems.ifOwnSink() == true)
+            animator.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("UpgradedSink");
+        else
+            animator.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Sink");
     }
 
     // Update is called once per frame

@@ -3,7 +3,13 @@ guid: 8d19d1e10c6e0b548a7bfe0a22e8308a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - sinkSprite: {instanceID: 0}
+  - canSprite: {instanceID: 0}
+  - normalSink: {fileID: 21300000, guid: 6d7331a1e10c3d54a9c258d8ab393054, type: 3}
+  - upgradedSink: {fileID: 21300000, guid: 51004c77251574d1ca6babcbeb151a41, type: 3}
+  - normalCan: {fileID: 21300000, guid: 2b043e78d8b6a3746b1483b822b72c14, type: 3}
+  - upgradedCan: {fileID: 21300000, guid: 0a4d06e9773a24242997443c8b74fe12, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

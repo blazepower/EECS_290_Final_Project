@@ -9,5 +9,6 @@ public class ResetVars : MonoBehaviour
     {
         OwnedItems.resetOwnedItems();
         Global.resetMoney();
+        CareerStats.resetCareerStats();
     }
 }

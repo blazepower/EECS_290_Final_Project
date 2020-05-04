@@ -69,4 +69,13 @@ public class CareerStats : MonoBehaviour
     {
         return totalMoneySpent;
     }
+
+    public static void resetCareerStats()
+    {
+        plantsBloomed = 0;
+        plantsDead = 0;
+        totalMoneyEarned = 0;
+        totalMoneyLost = 0;
+        totalMoneySpent = 0;
+    }
 }

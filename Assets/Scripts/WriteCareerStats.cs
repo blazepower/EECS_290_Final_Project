@@ -23,7 +23,7 @@ public class WriteCareerStats : MonoBehaviour
         moneyLost = CareerStats.getMoneyLost();
         moneySpent = CareerStats.getMoneySpent();
         initialWallet = Global.getInitialMoney();
-        totalIncome = moneyEarned - moneyLost;
+        totalIncome = moneyEarned - moneyLost - moneySpent;
         endingWallet = Global.getMoney();
 
         stats.text = "Total Plants Bloomed: " + plantsBloomed.ToString() + "\n" +
