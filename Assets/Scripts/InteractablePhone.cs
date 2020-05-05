@@ -38,7 +38,7 @@ namespace DefaultNamespace{
         void Update(){
             if (currRequestActive == true)
                 ringSound.Stop();
-            if (Time.time > initialRingTime){
+            if (Time.timeSinceLevelLoad > initialRingTime){
                 if (ringTime > 0){
                     if (!ringSound.isPlaying)
                         ringSound.Play(0);
@@ -49,7 +49,7 @@ namespace DefaultNamespace{
                     ringTime = 3.0f;
                     ringing = false;
                     ringSound.Stop();
-                    initialRingTime = Time.time + timeInBetweenRings;
+                    initialRingTime = Time.timeSinceLevelLoad + timeInBetweenRings;
                     gettingRequest = false;
                 }
 
