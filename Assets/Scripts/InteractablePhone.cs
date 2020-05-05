@@ -14,7 +14,7 @@ namespace DefaultNamespace{
         private bool currRequestActive;
         private bool initalTimeOver, ringing;
         private float initialRingTime = 10.0f;
-        private float timeInBetweenRings = 15.0f, ringTime = 5.0f, waitBeforeHide = 5.0f;
+        private float timeInBetweenRings = 14.0f, ringTime = 7.0f, waitBeforeHide = 4.0f;
         public AudioSource ringSound;
         public Animator animator;
 
