@@ -13,7 +13,7 @@ namespace DefaultNamespace{
         public Text currRequest;
         private bool currRequestActive;
         private bool initalTimeOver, ringing;
-        private float initialRingTime = 10.0f;
+        private float initialRingTime = 8.0f;
         private float timeInBetweenRings = 14.0f, ringTime = 7.0f, waitBeforeHide = 4.0f;
         public AudioSource ringSound;
         public Animator animator;
